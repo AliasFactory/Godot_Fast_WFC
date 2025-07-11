@@ -1,8 +1,6 @@
-The authors of the core algorithm provide more detail on this algorithm on their project page.
+This is a wrapper of a C++ version of a WFC algorithm. This plugin includes three quick demos as well as the sample data used in the repo of the core algorithm.
 
-This plugin includes some quick demos. It also includes the example data found in the repo of the core algorithm below.
+The authors of the core algorithm provide much more detail on their project page.
 
 https://github.com/mxgmn/WaveFunctionCollapse
-
-This plugin wraps a C++ fork with minimal modifications:
 https://github.com/math-fehr/fast-wfc
