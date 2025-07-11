@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://buq7m6nw2jvwr"]
 
-[ext_resource type="Script" uid="uid://cmckfqjsbb72t" path="res://addons/fast-wfc/demo/overlapping/overlapping_demo.gd" id="1_2af4k"]
+[ext_resource type="Script" uid="uid://dg6fqgs6agmbp" path="res://addons/Godot_Fast_WFC/demo/overlapping/overlapping_demo.gd" id="1_2af4k"]
 
 [node name="OverlappingDemo" type="Node2D"]
 script = ExtResource("1_2af4k")

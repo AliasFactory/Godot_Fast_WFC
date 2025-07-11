@@ -19,9 +19,9 @@ const FastWFC = preload("../../FastWFC.gd")
 var wfc: FastWFCWrapper
 
 # File paths
-var input_image_path = "res://addons/fast-wfc/demo/overlapping/Rooms.png"
-var image_output_path = "res://addons/fast-wfc/demo/overlapping/Rooms_output.png"
-var constraint_path = "res://addons/fast-wfc/demo/overlapping/3x3_pattern.png"
+var input_image_path = "res://addons/Godot_Fast_WFC/demo/overlapping/Rooms.png"
+var image_output_path = "res://addons/Godot_Fast_WFC/demo/overlapping/Rooms_output.png"
+var constraint_path = "res://addons/Godot_Fast_WFC/demo/overlapping/3x3_pattern.png"
 
 # Globalized paths for file operations
 @onready var global_input_path = ProjectSettings.globalize_path(input_image_path)

@@ -12,10 +12,6 @@ extends Node
 # FastWFC utility class for handy operations
 const FastWFC = preload("../../FastWFC.gd")
 
-# Output configuration
-var image_output_path = "res://addons/fast-wfc/demo/tiling/Rooms_output.png"
-@onready var global_image_output_path = ProjectSettings.globalize_path(image_output_path)
-
 # Reference to tilemap layer
 @onready var tile_map_layer: TileMapLayer = $"."
 
@@ -45,13 +41,13 @@ var seed = 12345
 # P: No symmetry (8 orientations) - most versatile
 
 # Normal weight values range from 0.0001 (extremely rare) to 20.0 (highly common) with a median of ~0.5
-# based on the dataset used by the core WFC algorithm own demo project (included in /addons/fast-wfc/src/fast-wfc).
+# based on the dataset used by the core WFC algorithm own demo project (included in /addons/Godot_Fast_WFC/src/fast-wfc).
 
 func _ready():
 	await get_tree().process_frame
 	tile_map_layer.visible = false
-	#direct_tiling_demo()
-	xml_tilemap_tiling_demo()
+	direct_tiling_demo()
+	#xml_tilemap_tiling_demo()
 
 # Demonstrates tiling WFC using XML-defined rules and color-based tile content
 #
@@ -63,22 +59,22 @@ func direct_tiling_demo():
 	
 	# Define paths to tile images
 	var tile_paths = {
-		"bend": "res://addons/fast-wfc/demo/tiling/tiles/bend.png",
-		"corner": "res://addons/fast-wfc/demo/tiling/tiles/corner.png",
-		"corridor": "res://addons/fast-wfc/demo/tiling/tiles/corridor.png",
-		"door": "res://addons/fast-wfc/demo/tiling/tiles/door.png",
-		"empty": "res://addons/fast-wfc/demo/tiling/tiles/empty.png",
-		"side": "res://addons/fast-wfc/demo/tiling/tiles/side.png",
-		"t": "res://addons/fast-wfc/demo/tiling/tiles/t.png",
-		"turn": "res://addons/fast-wfc/demo/tiling/tiles/turn.png",
-		"wall": "res://addons/fast-wfc/demo/tiling/tiles/wall.png"
+		"bend": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/bend.png",
+		"corner": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/corner.png",
+		"corridor": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/corridor.png",
+		"door": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/door.png",
+		"empty": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/empty.png",
+		"side": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/side.png",
+		"t": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/t.png",
+		"turn": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/turn.png",
+		"wall": "res://addons/Godot_Fast_WFC/demo/tiling/tiles/wall.png"
 	}
 	
-	var output_path = "res://addons/fast-wfc/demo/tiling/tiling_output.png"
+	var output_path = "res://addons/Godot_Fast_WFC/demo/tiling/tiling_output.png"
 	var global_output_path = ProjectSettings.globalize_path(output_path)
 	
 	# Load XML rules and tile definitions
-	var xml_data = FastWFC.load_xml_rules("res://addons/fast-wfc/demo/tiling/data.xml")
+	var xml_data = FastWFC.load_xml_rules("res://addons/Godot_Fast_WFC/demo/tiling/data.xml")
 
 	# Replace tile content with actual color data from images
 	var tile_data = {}
@@ -126,7 +122,7 @@ func xml_tilemap_tiling_demo():
 	}
 	
 	var wfc = FastWFCWrapper.new()
-	var xml_data = FastWFC.load_xml_rules("res://addons/fast-wfc/demo/tiling/data.xml", tile_name_to_id)
+	var xml_data = FastWFC.load_xml_rules("res://addons/Godot_Fast_WFC/demo/tiling/data.xml", tile_name_to_id)
 	
 	wfc.initialize_tiling(
 		xml_data.tile_data,
