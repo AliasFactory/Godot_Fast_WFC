@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "wfc_init"
+compatibility_minimum = "4.4"
+
+[libraries]
+#macos = "res://addons/fast-wfc/bin/libfast_wfc.macos.release.framework"
+windows = "res://addons/fast-wfc/bin/libfast_wfc.x86_64.windows.release.dll"
+linux = "res://addons/fast-wfc/bin/libfast_wfc.x86_64.linux.release.so"
