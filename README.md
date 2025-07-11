@@ -4,5 +4,5 @@ This plugin includes some quick demos. It also includes the example data found i
 
 https://github.com/mxgmn/WaveFunctionCollapse
 
-This plugin wraps a C++ fork, with minimal modifications:
+This plugin wraps a C++ fork with minimal modifications:
 https://github.com/math-fehr/fast-wfc
