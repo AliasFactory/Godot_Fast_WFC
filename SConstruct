@@ -106,18 +106,19 @@ env.Append(LIBS=[f"godot-cpp.{env['platform']}.template_{env['target']}{lib_suff
 sources = Glob("src/lib/*.cpp") + Glob("src/fast-wfc/src/lib/*.cpp") + ["src/include/register_types.cpp"]
 
 # Ensure the bin directory exists
-if not os.path.exists("bin"):
-    os.makedirs("bin")
+bin_dir = "addons/Godot_Fast_WFC/bin"
+if not os.path.exists(bin_dir):
+    os.makedirs(bin_dir)
 
 # Build the extension
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        f"bin/libfast_wfc.{env['platform']}.{env['target']}.framework/libfast_wfc.{env['platform']}.{env['target']}",
+        f"{bin_dir}/libfast_wfc.{env['platform']}.{env['target']}.framework/libfast_wfc.{env['platform']}.{env['target']}",
         source=sources,
     )
 else:
     library = env.SharedLibrary(
-        f"bin/libfast_wfc{lib_suffix}.{env['platform']}.{env['target']}{shared_lib_extension}",
+        f"{bin_dir}/libfast_wfc{lib_suffix}.{env['platform']}.{env['target']}{shared_lib_extension}",
         source=sources,
     )
 
