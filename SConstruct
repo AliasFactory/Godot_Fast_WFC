@@ -96,7 +96,7 @@ env.Append(LIBPATH=[godot_cpp_path + "/bin/"])
 
 # Platform-specific library linking
 if env["platform"] == "macos":
-    lib_suffix_for_linking = ""
+    lib_suffix_for_linking = ".universal"
 else:
     lib_suffix_for_linking = lib_suffix
 
