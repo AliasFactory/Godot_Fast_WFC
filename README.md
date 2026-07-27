@@ -10,7 +10,7 @@ https://github.com/math-fehr/fast-wfc
 
 ### Building
 
-You should have the `godot-cpp` cloned next to this repository's folder. Ensure that you have built the templates for linking to your specified platform/target/arch before you attempt to build the addon.
+You should have [godot-cpp](github.com/godotengine/godot-cpp/) cloned next to this repository's folder. Ensure that you have built the templates for linking to your specified platform/target/arch before you attempt to build the addon.
 
 ```zsh
 scons platform=... arch=...
