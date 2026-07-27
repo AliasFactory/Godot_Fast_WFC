@@ -24,7 +24,7 @@ env["target"] = ARGUMENTS.get("target", "release")
 arch = ARGUMENTS.get("arch", "x86_64")
 
 # Path to godot-cpp
-godot_cpp_path = "../../godot-cpp"
+godot_cpp_path = "../godot-cpp"
 
 # Add include paths
 env.Append(CPPPATH=[
@@ -113,7 +113,7 @@ if not os.path.exists(bin_dir):
 # Build the extension
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        f"{bin_dir}/libfast_wfc.{env['platform']}.{env['target']}.framework/libfast_wfc.{env['platform']}.{env['target']}",
+        f"{bin_dir}/libfast_wfc.universal.{env['platform']}.{env['target']}{shared_lib_extension}",
         source=sources,
     )
 else:
